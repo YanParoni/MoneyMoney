@@ -1,0 +1,36 @@
+{
+  "financings": [
+    {
+      "cpf": "43124509475",
+      "email": "paroniyan@gmail.com",
+      "phone": "11976448786",
+      "completeName": "yan de almeida paroni",
+      "state": "sp",
+      "city": "sao paulo",
+      "district": "",
+      "number": "632",
+      "street": "rua adolfo pinheiro",
+      "cep": "03737020",
+      "value": "1000235",
+      "balance": "5000332",
+      "name": "netlogics",
+      "id": 3
+    },
+    {
+      "cpf": "11111111111",
+      "email": "tantofaz@gmail.com",
+      "phone": "11111111111",
+      "completeName": "jjdjdjkxkxkxi",
+      "state": "rj",
+      "city": "rio de janeiro",
+      "district": "meier",
+      "number": "867",
+      "street": "num sei",
+      "cep": "2773",
+      "value": "2824",
+      "balance": "525252",
+      "name": "padaria",
+      "id": 2
+    }
+  ]
+}
