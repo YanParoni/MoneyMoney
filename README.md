@@ -1,4 +1,4 @@
-# MoneyMoney
+# MoneyMoneyReactNative
 
 #Please read the following instructions as they are necessary steps to actually run the application, the reason being that json-server in the current moment has some 
 problems when running with react native applications, is not at all a big problem and there are numerous workarounds that you can find in the internet to run 
