@@ -1,1 +1,1 @@
-export default env = 'http://192.168.1.2:3000/financings'
+export default env = 'hereyouripv4adress/financings'
