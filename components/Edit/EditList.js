@@ -1,7 +1,7 @@
 import React from "react";
 import { FinancingList } from "../../components/Register/FinancingList";
 import * as yup from "yup";
-
+import env from "../../env";
 export const schema = yup.object({
   name: yup
     .string()
@@ -34,7 +34,7 @@ export const schema = yup.object({
 
 export const EditList = ({ preloadedValues, id, navigation }) => {
   const handleForm = (data) => {
-    fetch(`http://youripv4adress:port/financings/${id}`, {
+    fetch(`${env}/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),

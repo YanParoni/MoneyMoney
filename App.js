@@ -10,19 +10,19 @@ import { Details } from "./screens/Details/Details";
 import { IconButton } from "react-native-paper";
 import { Edit } from "./screens/Edit/Edit";
 import { SearchContextProvider } from "./context/SearchContext";
-import { useFonts } from 'expo-font';
-
+import { useFonts } from "expo-font";
+import env from "./env";
 const Stack = createNativeStackNavigator();
 export default function App() {
   const [loaded] = useFonts({
-    Roboto: require('./assets/fonts/Roboto-Regular.ttf'),
+    Roboto: require("./assets/fonts/Roboto-Regular.ttf"),
   });
 
   if (!loaded) {
     return null;
   }
   const deleteFinancing = async (id, navigation) => {
-    fetch(`http://youripv4adress:port/financings/${id}`, {
+    fetch(`${env}/${id}`, {
       method: "DELETE",
     }).then(() => navigation.navigate("Home"));
   };

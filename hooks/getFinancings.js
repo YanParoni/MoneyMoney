@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useIsFocused } from "@react-navigation/native";
-
 export const getFinancings = (url) => {
   const isFocused = useIsFocused();
 

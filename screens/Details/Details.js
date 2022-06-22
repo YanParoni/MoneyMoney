@@ -2,18 +2,9 @@ import React from "react";
 import { ScrollView } from "react-native";
 import { DetailsList } from "../../components/Details/DetailsList";
 import { ActivityIndicator } from "react-native-paper";
+import { getOneFinancing } from "../../hooks/getOneFinancing";
 export const Details = ({ route, navigation }) => {
-  const [data, setData] = React.useState();
-
-  const handleFetch = async (route) => {
-    fetch(`http://youripv4adress:port/financings/${route}`)
-      .then((e) => e.json())
-      .then((e) => setData(e));
-  };
-
-  React.useEffect(() => {
-    handleFetch(route.params.id);
-  }, []);
+  const { error, isLoading, data } = getOneFinancing(route.params.id);
 
   return (
     <ScrollView style={{ backgroundColor: "white", padding: 21 }}>

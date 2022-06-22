@@ -6,11 +6,11 @@ import { IconButton, ActivityIndicator } from "react-native-paper";
 import { getFinancings } from "../../hooks/getFinancings";
 import { useIsFocused } from "@react-navigation/native";
 import { SearchContext } from "../../context/SearchContext";
+import env from'../../env'
 export const Home = ({ navigation }) => {
   const isFocused = useIsFocused();
-  const { data,} = getFinancings("http://youripv4adress:port/financings");
+  const { data } = getFinancings(env);
   const [finalData, setData] = React.useState();
-
   const { search } = React.useContext(SearchContext);
   React.useEffect(() => {
     setData(data);
@@ -25,10 +25,9 @@ export const Home = ({ navigation }) => {
   React.useEffect(() => {
     if (search) {
       filterData();
-    }else{
-      setData(data)
+    } else {
+      setData(data);
     }
-
   }, [search]);
   return (
     <>
