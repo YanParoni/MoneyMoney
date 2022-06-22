@@ -1,8 +1,8 @@
 # MoneyMoneyReactNative
 
-#Please read the following instructions as they are necessary steps to actually run the application, the reason being that json-server in the current moment has some 
+#Please read the following instructions as they are necessary steps to actually run the application, the reason being that json-server has some 
 problems when running with react native applications, is not at all a big problem and there are numerous workarounds that you can find in the internet to run 
-it, but i choose the most acessible option, with is using your device with expo<br>
+it, but i choose the most acessible option, with is using your mobile device with the expo app<br>
 
 1.To run this project in your phone first run ipconfig -all in windows or ipconfig -a for mac/linux and grab your ip adress, <br> 
 2.Now run yarn run json-server --watch data/db.json  --host youripv4adress then run  expo start and start the application in your mobile <br>
