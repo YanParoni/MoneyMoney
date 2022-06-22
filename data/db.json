@@ -1,36 +1,5 @@
 {
   "financings": [
-    {
-      "cpf": "11111111111",
-      "email": "paroniyan@gmail.com",
-      "phone": "11111111111",
-      "completeName": "jjdjdjkxkxkxi",
-      "state": "sp",
-      "city": "jxjdjidd",
-      "district": "jihihiui",
-      "number": "8667",
-      "street": "djhsjhsjs",
-      "cep": "2773",
-      "value": "282",
-      "balance": "558",
-      "name": "gsgdgdgdh",
-      "id": 2
-    },
-    {
-      "cpf": "11111111111",
-      "email": "paroniyan@gmail.com",
-      "phone": "11111111111",
-      "completeName": "jjdjdjkxkxkxi",
-      "state": "sp",
-      "city": "jxjdjidd",
-      "district": "jihihiui",
-      "number": "8667",
-      "street": "djhsjhsjs",
-      "cep": "2773",
-      "value": "282",
-      "balance": "558",
-      "name": "aaaaaaaaa",
-      "id": 2
-    }
+  
   ]
 }
