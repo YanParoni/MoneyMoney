@@ -1,1 +1,1 @@
-export default env = 'hereyouripv4adress/financings'
+export default env = 'https:// /financings'

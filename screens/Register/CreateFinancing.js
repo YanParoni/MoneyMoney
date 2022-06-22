@@ -2,11 +2,11 @@ import React from "react";
 import {  StyleSheet, } from "react-native";
 import { useForm } from "react-hook-form";
 import { FinancingList } from "../../components/Register/FinancingList";
-
+import env from "../../env";
 export const CreateFinancing = ({navigation}) => {
 
   const handleForm = (data) => {
-    fetch("http://192.168.1.2:3000/financings", {
+    fetch(env, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(data),
