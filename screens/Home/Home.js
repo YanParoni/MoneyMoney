@@ -6,15 +6,15 @@ import { IconButton, ActivityIndicator } from "react-native-paper";
 import { getFinancings } from "../../hooks/getFinancings";
 import { useIsFocused } from "@react-navigation/native";
 import { SearchContext } from "../../context/SearchContext";
-import env from'../../env'
+import env from "../../env";
 export const Home = ({ navigation }) => {
   const isFocused = useIsFocused();
-  const { data } = getFinancings(env);
+  const { data,isLoading } = getFinancings(env);
   const [finalData, setData] = React.useState();
   const { search } = React.useContext(SearchContext);
   React.useEffect(() => {
     setData(data);
-  }, [isFocused, data]);
+  }, [data]);
 
   const filterData = () => {
     const final = finalData.filter((item) =>
@@ -29,11 +29,22 @@ export const Home = ({ navigation }) => {
       setData(data);
     }
   }, [search]);
+  console.log(finalData,data)
   return (
     <>
       <View style={{ flexDirection: "column", backgroundColor: "white" }}>
         <HomeHeader />
-        {finalData ? (
+        {isLoading ? (
+        <View style={{ height: "57%", padding: 20 }}>
+          <ActivityIndicator
+            animating={true}
+            style={{ marginTop: 30 }}
+            color="#FF6600"
+            size={50}
+          />
+        </View>
+      ) : null}
+        {finalData?.length > 0 ? (
           <FlatList
             style={{ height: "57%" }}
             data={finalData}
@@ -49,16 +60,14 @@ export const Home = ({ navigation }) => {
             keyExtractor={(item) => item.id}
           />
         ) : (
-          <View style={{ height: "57%" }}>
-            <ActivityIndicator
-              animating={true}
-              style={{ marginTop: 30 }}
-              color="#FF6600"
-              size={50}
-            />
+          <View style={{ height: "57%", padding: 20 }}>
+            <Text style={{ color: "#FF6600", fontSize: 25 }}>
+              Não há nenhum pedido registrado, bora fazer um? =){" "}
+            </Text>
           </View>
         )}
       </View>
+  
       <View
         style={{
           flexDirection: "row",

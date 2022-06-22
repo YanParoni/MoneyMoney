@@ -7,17 +7,15 @@ export const getFinancings = (url) => {
   const [data, setData] = useState();
   const [isLoading,setLoading] = useState(true)
   useEffect(() => {
-    const callData = async () => {
-      try {
-        const res = await fetch(url);
-        const final =  await res.json()
-        setData(final);
-        setLoading(false)
-      } catch (e) {
-        setError(e);
-      }
-    };
-    callData();
+    const abortControl= new AbortController()
+    setTimeout(()=>{
+      fetch(url, {signal:abortControl.signal})
+      .then(e=>e.json())
+      .then(e=>setData(e))
+      .then(()=>setLoading(false))
+      .catch((e)=>console.log(e));
+    },3000)
+    return ()=>abortControl.abort()
   }, [isFocused]);
 
   return { error, data ,isLoading};

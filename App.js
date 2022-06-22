@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, } from "react-native";
 import { Home } from "./screens/Home/Home";
 import { Provider as PaperProvider } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";

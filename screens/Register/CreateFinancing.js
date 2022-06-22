@@ -1,6 +1,4 @@
 import React from "react";
-import {  StyleSheet, } from "react-native";
-import { useForm } from "react-hook-form";
 import { FinancingList } from "../../components/Register/FinancingList";
 import env from "../../env";
 export const CreateFinancing = ({navigation}) => {

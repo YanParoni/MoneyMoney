@@ -45,7 +45,7 @@ const style = StyleSheet.create({
     fontWeight: "bold",
     borderColor: "#D9D9D952",
     paddingBottom: 6,
-    marginBottom: 23,
+    marginVertical: 23,
   },
   secondaryLabel: {
     fontSize: 16,
