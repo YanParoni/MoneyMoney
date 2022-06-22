@@ -1,12 +1,12 @@
 import React from 'react'
 import { Label,} from '../Register/Label';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native';
 import { Input } from '../Register/Input';
 import { Button,  } from "react-native-paper";
 import { useForm,  } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
+import { style } from './FinancingListStyles';
 export const schema = yup
   .object({
     name: yup.string()
@@ -164,29 +164,3 @@ export const FinancingList = ({buttonText,preloadedValues,handleForm,...rest}) =
 }
 
 
-const style = StyleSheet.create({
-    mainLabel: {
-      fontSize: 24,
-      color: "#4B4B4B",
-      borderBottomWidth: 2,
-      fontWeight: "bold",
-      borderColor: "#D9D9D952",
-      paddingBottom:6,
-      marginBottom:20
-    },
-    secondaryLabel: {
-      fontSize: 17,
-      color: "#4B4B4B",
-      fontWeight: "bold",
-    },
-    textInputOutlineStyle: {
-      colors: {
-        text: "#FF6600",
-        primary: "#FF6600",
-        underlineColor: "transparent",
-        border: "red",
-        background: "white",
-      },
-    },
-  });
-  
