@@ -7,6 +7,6 @@ it, but i choose the most acessible option, with is using your device with expo<
 1.To run this project in your phone first run ipconfig -all in windows or ipconfig -a for mac/linux and grab your ip adress, <br> 
 2.Now run yarn run json-server --watch data/db.json  --host youripv4adress then run  expo start and start the application in your mobile <br>
 3.Inside env.js file change the string to https://yourip:yourport/financings that you grabbed on step 1 and 2<br>
-5. after that you are good to go!<br>
-6. this project was a test for MoneyMoneyInvest the design used was https://www.figma.com/file/IdSZPy5nqM0b6crMPpXYtb/Teste---Front-Mobile?node-id=3%3A42<br>
-7. atm there is no mask for the inputs
+4. after that you are good to go!<br>
+5. this project was a test for MoneyMoneyInvest the design used was https://www.figma.com/file/IdSZPy5nqM0b6crMPpXYtb/Teste---Front-Mobile?node-id=3%3A42<br>
+6. atm there is no mask for the inputs
